@@ -1,0 +1,20 @@
+<!-- subjects/templates/subjects/subject_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ subject.name }}</title>
+</head>
+<body>
+    <h1>{{ subject.name }}</h1>
+    <p>{{ subject.description }}</p>
+    <div>
+        <img src="{{ subject.image.url }}" alt="{{ subject.name }}" style="max-width: 600px; height: auto;">
+    </div>
+    <div class="details">
+        <p>{{ subject.details }}</p>  
+    </div>
+    <a href="{% url 'subjects' %}">Back to Subjects</a>
+</body>
+</html>
